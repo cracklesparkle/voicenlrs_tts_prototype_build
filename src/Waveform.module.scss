@@ -1,0 +1,16 @@
+.wavesurfer_wrap {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 16px;
+    align-items: center;
+
+    button {
+        width: 40px;
+        height: 40px;
+        border: none;
+        padding: 0;
+        background: none;
+
+        cursor: pointer;
+    }
+}

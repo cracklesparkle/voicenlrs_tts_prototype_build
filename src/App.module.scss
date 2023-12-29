@@ -1,6 +1,52 @@
 @import './typed.scss';
 
-.centered_text{
+a{
+  color: white;
+  transition: all .3s ease-out;
+}
+
+.hint{
+  font-size: x-large;
+  text-align: center;
+}
+
+a:hover{
+  color: rgb(61, 106, 231);
+}
+
+.examples_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+
+  .example_element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+
+
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    //background-color: rgba(51, 64, 85, 0.171);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    transition: all .3s;
+    padding: 24px;
+    .example_text {
+      font-size:larger;
+    }
+  }
+
+  .example_element:hover{
+    background-color: rgb(61, 106, 231);
+  }
+}
+
+.centered_text {
   text-align: center;
 }
 
@@ -78,6 +124,7 @@
   align-items: center;
   gap: 36px;
   scroll-snap-type: y mandatory;
+  max-width: 100%;
 }
 
 h1 {
@@ -122,6 +169,7 @@ input {
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
 
+  scroll-snap-align: start;
 }
 
 .section_element {
@@ -156,7 +204,7 @@ input {
   background-color: white;
   //padding-left: 16px;
 
-  .input_synthesize{
+  .input_synthesize {
     position: absolute;
     display: flex;
     align-items: center;
@@ -182,7 +230,7 @@ input {
     height: 100%;
     background-color: transparent;
     border: none;
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.7);
     outline: none;
     padding-left: 16px;
   }
@@ -197,7 +245,7 @@ input {
       "Хараҕын быһа симэн, өр хамнаабакка сытта",
       2,
       (caret-width: 2px,
-        caret-space: 2px));
+        caret-space: 2px, delay: 1));
   }
 
   >input {
@@ -375,7 +423,7 @@ input {
   aspect-ratio: 1/1;
   z-index: -1;
   filter: blur(calc(var(--size) / 5));
-  background-image: linear-gradient(hsl(158, 82, 57, 85%), hsl(252, 82, 57));
+  background-image: linear-gradient(hsla(216, 82%, 57%, 0.85), hsl(252, 82, 57));
   animation: rotate var(--speed) var(--easing) alternate infinite;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
